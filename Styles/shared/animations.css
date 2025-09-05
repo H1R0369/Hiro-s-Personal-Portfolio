@@ -1,6 +1,29 @@
 @keyframes cursor {
 
-    50% { border-right: transparent };
+    50% { border-right: 4px solid white };
+
+}
+
+@keyframes fade-right {
+    
+    from { width: 0; overflow: hidden;}
+
+}
+
+@keyframes glow-text-primary {
+    
+    to {
+
+    text-shadow: 
+        0px 0px 5px var(--color-secondary),
+        0px 0px 15px var(--color-secondary),
+        0px 0px 20px var(--color-secondary),
+        0px 0px 30px var(--color-secondary),
+        0px 0px 40px var(--color-secondary),
+        0px 0px 60px var(--color-secondary),
+        0px 0px 98px var(--color-secondary);    
+
+    }
 
 }
 

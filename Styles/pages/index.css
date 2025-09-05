@@ -1,0 +1,42 @@
+/* ==================== SECTIONS ==================== */
+
+/* ===== MAIN ===== */
+
+/* ---------- Hero ---------- */
+
+.hero-section {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.logo {
+
+    animation: 
+        fade-right 3s, 
+        glow-text-primary 3s forwards 1s;
+
+}
+
+.alias-paragraph {
+
+    font-size: var(--text-paragraph);
+
+}
+
+/* ==================== COMPONENTS ==================== */
+
+.text-glow-primary {
+
+    text-shadow: 
+        0px 0px 5px var(--color-secondary),
+        0px 0px 15px var(--color-secondary),
+        0px 0px 20px var(--color-secondary),
+        0px 0px 30px var(--color-secondary),
+        0px 0px 40px var(--color-secondary),
+        0px 0px 60px var(--color-secondary),
+        0px 0px 98px var(--color-secondary);
+
+}
