@@ -1,0 +1,13 @@
+@keyframes cursor {
+
+    50% { border-right: transparent };
+
+}
+
+.typewriter {
+
+    display: inline;
+    border-right: 4px solid black;
+    animation: cursor 0.4s infinite;
+
+}
