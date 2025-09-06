@@ -62,9 +62,9 @@
 }
 
 .logo-name {
-
+    overflow: hidden;
     animation: 
         fade-right 3s, 
-        glow-text-primary 3s forwards 1s;
+        glow-text-primary 2s forwards 0.5s;
 
 }

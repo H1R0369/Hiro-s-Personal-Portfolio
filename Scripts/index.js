@@ -21,6 +21,12 @@ setTimeout(() => {
 
 }, 1200);
 
+setTimeout(() => {
+    
+    logoName.style.overflow = 'visible';
+
+}, 2000);
+
 let aliasIdx = 0;
 
 setInterval(() => {
