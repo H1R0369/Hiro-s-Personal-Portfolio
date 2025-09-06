@@ -25,9 +25,11 @@ let aliasIdx = 0;
 
 setInterval(() => {
     
-    aliasParagraphEl.textContent = aliases[aliasIdx]
+    aliasParagraphEl.textContent = aliases[aliasIdx];
+    aliasParagraphEl.style.setProperty('--steps', aliases[aliasIdx].length);
+
     aliasIdx++;
 
     if (aliasIdx > aliases.length - 1) aliasIdx = 0;
 
-}, 2500);
+}, 4000);

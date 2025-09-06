@@ -56,7 +56,7 @@
     overflow: hidden;
     border-right: 4px solid black;
     animation: 
-        typing steps(var(--steps)) 2.5s infinite alternate,
+        typing steps(var(--steps)) 4s infinite alternate,
         cursor 0.4s infinite;
 
 }
