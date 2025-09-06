@@ -4,9 +4,20 @@
 
 }
 
+@keyframes typing {
+    
+    0% {width: 0}
+    5% {width: 0}
+    20% {width: 100%}
+    80% {width: 100%}
+    95% {width: 0}
+    100% {width: 0}
+
+}
+
 @keyframes fade-right {
     
-    from { width: 0; overflow: hidden;}
+    from { width: 0}
 
 }
 
@@ -27,11 +38,26 @@
 
 }
 
-.typewriter {
+.alias-paragraph-container {
 
-    display: inline;
+    display: inline-block;
+    align-self: flex-start;
+    text-wrap: nowrap;
+
+}
+
+.alias-paragraph {
+
+    --steps: 5;
+
+    font-family: monospace, 'Barriecito', 'Poppins', sans-serif;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
     border-right: 4px solid black;
-    animation: cursor 0.4s infinite;
+    animation: 
+        typing steps(var(--steps)) 2.5s infinite alternate,
+        cursor 0.4s infinite;
 
 }
 
