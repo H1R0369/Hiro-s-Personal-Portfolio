@@ -34,3 +34,11 @@
     animation: cursor 0.4s infinite;
 
 }
+
+.logo-name {
+
+    animation: 
+        fade-right 3s, 
+        glow-text-primary 3s forwards 1s;
+
+}

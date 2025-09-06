@@ -12,14 +12,6 @@
 
 }
 
-.logo {
-
-    animation: 
-        fade-right 3s, 
-        glow-text-primary 3s forwards 1s;
-
-}
-
 .alias-paragraph {
 
     font-size: var(--text-paragraph);
