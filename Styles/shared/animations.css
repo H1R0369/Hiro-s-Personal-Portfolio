@@ -38,6 +38,13 @@
 
 }
 
+.logo-name-heading {
+
+    overflow: hidden;
+    animation: glow-text-primary 1.5s ease-in-out 1s forwards;
+
+}
+
 .alias-heading-container {
 
     display: inline-block;
@@ -58,13 +65,5 @@
     animation: 
         typing steps(var(--steps)) 4s infinite alternate,
         cursor 0.4s infinite;
-
-}
-
-.logo-name-heading {
-    overflow: hidden;
-    animation: 
-        fade-right 3s, 
-        glow-text-primary 2s forwards 0.5s;
 
 }
