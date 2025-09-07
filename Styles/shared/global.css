@@ -32,7 +32,7 @@ header, main {
 
 /* ---------- Navigation ---------- */
 
-.logo-name {
+.logo-name-heading {
     width: 300px;
     font-size: var(--text-h3);
 }

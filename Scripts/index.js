@@ -8,8 +8,8 @@ const aliases = [
     'AN ARTIST'
 
 ]
-const aliasParagraphEl = document.querySelector('.alias-paragraph');
-const logoName = document.querySelector('.logo-name');
+const aliasParagraphEl = document.querySelector('.alias-heading');
+const logoName = document.querySelector('.logo-name-heading');
 
 
 logoName.style.animationPlayState = 'paused';

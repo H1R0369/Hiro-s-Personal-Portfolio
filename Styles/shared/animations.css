@@ -38,7 +38,7 @@
 
 }
 
-.alias-paragraph-container {
+.alias-heading-container {
 
     display: inline-block;
     align-self: flex-start;
@@ -46,7 +46,7 @@
 
 }
 
-.alias-paragraph {
+.alias-heading {
 
     --steps: 5;
 
@@ -61,7 +61,7 @@
 
 }
 
-.logo-name {
+.logo-name-heading {
     overflow: hidden;
     animation: 
         fade-right 3s, 
