@@ -13,9 +13,9 @@ gsap.to('.logo-name-heading', {
 
         {
             width: 300,
-            duration: 1.5,
+            duration: 3,
             ease: 'linear',
-            delay: 1,
+            delay: 1.2,
             startAt: {
                 width: 0,
                 opacity: 1
@@ -31,7 +31,8 @@ gsap.to('.logo-name-heading', {
                 0px 0px 40px var(--color-secondary),
                 0px 0px 60px var(--color-secondary),
                 0px 0px 98px var(--color-secondary)
-                `
+            `,
+            duration: 2,
         }
 
     ]
@@ -40,7 +41,7 @@ gsap.to('.logo-name-heading', {
 gsap.to('.logo-name-heading', {
 
     overflow: 'visible',
-    delay: 1.5
+    delay: 2.5
 
 })
 
