@@ -2,27 +2,45 @@
 
 gsap.set('.logo-name-heading', {
 
-    opacity: 0
+    opacity: 0,
+    overflow: 'hidden'
 
 })
 
 gsap.to('.logo-name-heading', {
 
-    width: 300,
-    duration: 1.5,
-    ease: 'linear',
-    delay: 1,
-    startAt: {
-        width: 0,
-        opacity: 1
-    }
+    keyframes: [
 
+        {
+            width: 300,
+            duration: 1.5,
+            ease: 'linear',
+            delay: 1,
+            startAt: {
+                width: 0,
+                opacity: 1
+            }
+        },
+
+        {
+            textShadow: `
+                0px 0px 5px var(--color-secondary),
+                0px 0px 15px var(--color-secondary),
+                0px 0px 20px var(--color-secondary),
+                0px 0px 30px var(--color-secondary),
+                0px 0px 40px var(--color-secondary),
+                0px 0px 60px var(--color-secondary),
+                0px 0px 98px var(--color-secondary)
+                `
+        }
+
+    ]
 })
 
 gsap.to('.logo-name-heading', {
 
     overflow: 'visible',
-    delay: 2
+    delay: 1.5
 
 })
 
