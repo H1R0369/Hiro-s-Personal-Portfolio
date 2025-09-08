@@ -47,3 +47,59 @@ gsap.to('.logo-name-heading', {
 
 // Alias Heading Animations
 
+const aliasParagraphEl = document.querySelector('.alias-heading');
+const names = [
+
+    'CODE WIZARD',
+    'FULLSTACK DEVELOPER',
+    'PYTHON ENTHUSIAST',
+    'GAME DEVELOPER',
+    'A SINGER',
+    'AN ARTIST'
+
+];
+
+const namesHTML = names.map(name => {
+
+    let nameHTML = '';
+
+    Array.from(name).forEach(letter => {
+
+        if (letter === ' ') {nameHTML += ' '}
+        else {nameHTML += `<span>${letter}</span>`};
+
+    });
+
+    return nameHTML;
+
+});
+
+gsap.set(aliasParagraphEl, {innerHTML: namesHTML[0]});
+
+let tl = gsap.timeline({ease: 'linear', repeat: -1});
+
+namesHTML.forEach(nameHTML => {
+
+    tl.set(aliasParagraphEl, {innerHTML: nameHTML});
+
+    tl.call(() => {
+
+        gsap.from('.alias-heading span', {
+
+            display: 'none',
+            duration: 1,
+            stagger: 0.1,
+            ease: 'linear',
+            yoyoEase: 'power4',
+            yoyo: true,
+            repeat: 1,
+                
+        });
+
+    })
+
+    tl.to({}, {duration: 6})
+
+})
+
+

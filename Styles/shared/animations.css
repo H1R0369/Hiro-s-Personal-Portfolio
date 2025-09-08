@@ -31,15 +31,13 @@
 
 .alias-heading {
 
-    --steps: 5;
-
     font-family: monospace, 'Barriecito', 'Poppins', sans-serif;
     display: inline-block;
     width: 100%;
+    height: var(--text-paragraph);
     overflow: hidden;
     border-right: 4px solid black;
     animation: 
-        typing steps(var(--steps)) 4s infinite alternate,
         cursor 0.4s infinite;
 
 }
