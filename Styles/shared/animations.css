@@ -37,7 +37,5 @@
     height: var(--text-paragraph);
     overflow: hidden;
     border-right: 4px solid black;
-    animation: 
-        cursor 0.4s infinite;
 
 }
