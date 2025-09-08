@@ -87,13 +87,13 @@ namesHTML.forEach(nameHTML => {
         gsap.from('.alias-heading span', {
 
             opacity: 0,
-            duration: 0.001,
+            duration: 0.1,
             stagger: 0.1,
             ease: 'linear',
             yoyoEase: 'power4',
             yoyo: true,
             repeat: 1,
-            repeatDelay: 0.5
+            repeatDelay: 0.6
                 
         });
 
