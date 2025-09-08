@@ -47,7 +47,7 @@ gsap.to('.logo-name-heading', {
 
 // Alias Heading Animations
 
-const aliasParagraphEl = document.querySelector('.alias-heading');
+const aliasEl = document.querySelector('.alias-heading');
 const names = [
 
     'CODE WIZARD',
@@ -74,33 +74,50 @@ const namesHTML = names.map(name => {
 
 });
 
-gsap.set(aliasParagraphEl, {innerHTML: namesHTML[0]});
+let tl = gsap.timeline({defaults: {}, ease: 'linear', repeat: -1});
+let idx = 0;
 
-let tl = gsap.timeline({ease: 'linear', repeat: -1});
+setInterval(() => {
 
-namesHTML.forEach(nameHTML => {
+    aliasEl.innerHTML = namesHTML[idx]
+    idx++;
+    if (idx > names.length - 1) idx = 0;
 
-    tl.set(aliasParagraphEl, {innerHTML: nameHTML});
+    gsap.from('.alias-heading span', {
 
-    tl.call(() => {
-
-        gsap.from('.alias-heading span', {
-
-            opacity: 0,
-            duration: 0.1,
-            stagger: 0.1,
-            ease: 'linear',
-            yoyoEase: 'power4',
-            yoyo: true,
-            repeat: 1,
-            repeatDelay: 0.6
-                
-        });
+        opacity: 0,
+        duration: 0.01,
+        stagger: 0.1,
+        ease: 'linear',
+        repeat: 1,
+        repeatDelay: 0.5,
+        yoyo: true
 
     })
+    
+}, 5000)
+    // .from(aliasEl, {
 
-    tl.to({}, {duration: 6})
+    //     innerHTML: namesHTML[1]
 
-})
+    // })
+    // .from(aliasEl, {
 
+    //     innerHTML: namesHTML[2]
 
+    // })
+    // .from(aliasEl, {
+
+    //     innerHTML: namesHTML[3]
+
+    // })
+    // .from(aliasEl, {
+
+    //     innerHTML: namesHTML[4]
+
+    // })
+    // .from(aliasEl, {
+
+    //     innerHTML: namesHTML[5]
+
+    // })
