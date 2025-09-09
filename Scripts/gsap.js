@@ -18,7 +18,7 @@ function init() {
 
         autoAlpha: 1,
         display: 'flex',
-        delay: 1,
+        delay: 0.5,
         duration: 2
 
     })
@@ -63,7 +63,6 @@ function init() {
 
     // Alias Heading Animations
 
-    const aliasEl = document.querySelector('.alias-heading');
     const names = [
 
         'CODE WIZARD',
@@ -75,68 +74,24 @@ function init() {
 
     ];
 
-    const namesHTML = names.map(name => {
-
-        let nameHTML = '';
-
-        Array.from(name).forEach(letter => {
-
-            if (letter === ' ') {nameHTML += ' '}
-            else {nameHTML += `<span>${letter}</span>`};
-
-        });
-
-        return nameHTML;
-
-    });
-
-    let tl = gsap.timeline({defaults: {}, ease: 'linear', repeat: -1});
     let idx = 0;
+    const tl = gsap.timeline({repeat: -1, repeatDelay: 0.5, delay: 1, onRepeat() {idx++}})
 
-    setInterval(() => {
+        .to('.alias-heading', {
 
-        aliasEl.innerHTML = namesHTML[idx]
-        idx++;
-        if (idx > names.length - 1) idx = 0;
+            text: () => {
 
-        gsap.from('.alias-heading span', {
+                return names[idx]
 
-            visibility: 'hidden',
-            duration: 0.01,
-            stagger: 0.1,
-            ease: 'linear',
+            },
+            duration: 1.5,
             repeat: 1,
             repeatDelay: 0.5,
-            yoyo: true
+            repeatRefresh: true,
+            yoyo: true,
 
         })
-        
-    }, 5000)
-        // .from(aliasEl, {
 
-        //     innerHTML: namesHTML[1]
-
-        // })
-        // .from(aliasEl, {
-
-        //     innerHTML: namesHTML[2]
-
-        // })
-        // .from(aliasEl, {
-
-        //     innerHTML: namesHTML[3]
-
-        // })
-        // .from(aliasEl, {
-
-        //     innerHTML: namesHTML[4]
-
-        // })
-        // .from(aliasEl, {
-
-        //     innerHTML: namesHTML[5]
-
-        // })
 }
 
 window.addEventListener('load', () => init());
