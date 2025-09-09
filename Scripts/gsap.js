@@ -92,7 +92,7 @@ function init() {
 
             },
             duration: 1.5,
-            ease: 'linear',
+            ease: 'power1.in',
             repeat: 1,
             repeatDelay: 0.5,
             repeatRefresh: true,
