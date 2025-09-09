@@ -78,14 +78,13 @@ function init() {
 
     const split = new SplitText('.alias-heading', {type: 'chars'});
 
-    gsap.set(split.chars, {opacity: 0})
+    gsap.set(split.chars, {visibility: 'hidden'})
 
     gsap.from(split.chars, {
 
         keyframes: {
 
-            '0%': {opacity: 0},
-            '1%': {opacity: 1}
+            '0.01%': {autoAlpha: 1}
 
         },
 
@@ -93,7 +92,7 @@ function init() {
         repeat: -1,
         repeatDelay: 0.5,
         yoyo: true,
-        ease: 'power1.in',
+        ease: 'power4.in',
         duration: 1
 
     })
