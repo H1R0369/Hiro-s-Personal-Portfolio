@@ -1,13 +1,8 @@
+gsap.registerPlugin(TextPlugin)
+
 // Logo Name Heading Animations
 
 function init() {
-
-    gsap.set('.logo-name-heading', {
-
-        opacity: 0,
-        overflow: 'hidden'
-
-    })
 
     gsap.fromTo('.main-container', {
 
@@ -21,7 +16,14 @@ function init() {
         delay: 0.5,
         duration: 2
 
-    })
+    });
+
+    gsap.set('.logo-name-heading', {
+
+        opacity: 0,
+        overflow: 'hidden'
+
+    });
 
     gsap.to('.logo-name-heading', {
 
@@ -52,7 +54,7 @@ function init() {
             }
 
         ]
-    })
+    });
 
     gsap.to('.logo-name-heading', {
 
@@ -74,31 +76,54 @@ function init() {
 
     ];
 
-    let idx = 0;
-    const tl = gsap.timeline({
-        repeat: -1, 
-        repeatDelay: 0.5, 
-        delay: 1, 
-        onRepeat() {
-            idx++;
-            if (idx > names.length - 1) idx = 0;
-        }})
+    const split = new SplitText('.alias-heading', {type: 'chars'});
 
-        .to('.alias-heading', {
+    gsap.set(split.chars, {opacity: 0})
 
-            text: () => {
+    gsap.from(split.chars, {
 
-                return names[idx]
+        keyframes: {
 
-            },
-            duration: 1.5,
-            ease: 'power1.in',
-            repeat: 1,
-            repeatDelay: 0.5,
-            repeatRefresh: true,
-            yoyo: true,
+            '0%': {opacity: 0},
+            '1%': {opacity: 1}
 
-        })
+        },
+
+        stagger: 0.1,
+        repeat: -1,
+        repeatDelay: 0.5,
+        yoyo: true,
+        ease: 'power1.in',
+        duration: 1
+
+    })
+
+
+    // let idx = 0;
+    // const tl = gsap.timeline({
+    //     repeat: -1, 
+    //     repeatDelay: 0.5, 
+    //     delay: 1, 
+    //     onRepeat() {
+    //         idx++;
+    //         if (idx > names.length - 1) idx = 0;
+    //     }})
+
+    //     .to('.alias-heading', {
+
+    //         text: () => {
+
+    //             return names[idx]
+
+    //         },
+    //         duration: 1.5,
+    //         ease: 'power1.in',
+    //         repeat: 1,
+    //         repeatDelay: 0.5,
+    //         repeatRefresh: true,
+    //         yoyo: true,
+
+    //     })
 
 }
 
