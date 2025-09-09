@@ -7,6 +7,20 @@ gsap.set('.logo-name-heading', {
 
 })
 
+gsap.fromTo('.main-container', {
+
+    autoAlpha: 0
+
+},
+{
+
+    autoAlpha: 1,
+    display: 'flex',
+    delay: 1,
+    duration: 2
+
+})
+
 gsap.to('.logo-name-heading', {
 
     keyframes: [
