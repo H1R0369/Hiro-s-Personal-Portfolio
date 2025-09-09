@@ -75,7 +75,14 @@ function init() {
     ];
 
     let idx = 0;
-    const tl = gsap.timeline({repeat: -1, repeatDelay: 0.5, delay: 1, onRepeat() {idx++}})
+    const tl = gsap.timeline({
+        repeat: -1, 
+        repeatDelay: 0.5, 
+        delay: 1, 
+        onRepeat() {
+            idx++;
+            if (idx > names.length - 1) idx = 0;
+        }})
 
         .to('.alias-heading', {
 
@@ -85,6 +92,7 @@ function init() {
 
             },
             duration: 1.5,
+            ease: 'linear',
             repeat: 1,
             repeatDelay: 0.5,
             repeatRefresh: true,
