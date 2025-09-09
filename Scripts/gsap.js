@@ -85,7 +85,7 @@ setInterval(() => {
 
     gsap.from('.alias-heading span', {
 
-        opacity: 0,
+        visibility: 'hidden',
         duration: 0.01,
         stagger: 0.1,
         ease: 'linear',
